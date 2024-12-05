@@ -12,9 +12,12 @@ create table courses(
     capacity INT
 );
 
-create table Enrollments(
-    enrollment_id (INT PRIMARY KEY AUTO_INCREMENT),
-    student_id (INT FOREIGN KEY REFERENCES Students(student_id)), 
-    course_id (INT FOREIGN KEY REFERENCES Courses(course_id))
+create table Enrollments (
+    enrollment_id INT PRIMARY KEY AUTO_INCREMENT,
+    student_id INT,
+    course_id INT,
+    FOREIGN KEY (student_id) REFERENCES Students(student_id),
+    FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
+
 
