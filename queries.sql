@@ -1,10 +1,12 @@
 #Query 1:
+  
 SELECT s.name , c.course_name, c.credits
 FROM Students s
 JOIN Enrollments e ON s.student_id = e.student_id
 JOIN Courses c ON e.course_id = c.course_id;
 
 #Query 2:
+  
 SELECT name
 FROM Students
 WHERE student_id NOT IN (SELECT DISTINCT student_id FROM Enrollments);
