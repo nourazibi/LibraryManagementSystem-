@@ -50,3 +50,10 @@ SELECT c.course_name
 FROM Courses c
 LEFT JOIN Enrollments e ON c.course_id = e.course_id
 WHERE e.student_id IS NULL;
+
+Task 7: Clean and Reset Data
+DELETE FROM Enrollments
+WHERE course_id = 101;
+
+DELETE FROM Students
+WHERE student_id NOT IN (SELECT DISTINCT student_id FROM Enrollments);
