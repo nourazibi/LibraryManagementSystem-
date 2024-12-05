@@ -53,7 +53,7 @@ WHERE e.student_id IS NULL;
 
 Task 7: Clean and Reset Data
 DELETE FROM Enrollments
-WHERE course_id = 101;
+WHERE course_id = 90;
 
 DELETE FROM Students
 WHERE student_id NOT IN (SELECT DISTINCT student_id FROM Enrollments);
